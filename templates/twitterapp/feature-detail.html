@@ -1,0 +1,12 @@
+{% extends '_base.html'%}
+{% block content %}
+   <h3>Feature list Details</h3>
+        <h4>Title: {{feature.name}}</h4>
+        <h4>Purchaser: {{feature.purchaser}}</h4>
+        <h4>Description: {{feature.discription}}</h4>
+        <button  class="_button"><a href="{% url 'list' %}">back</a></button>
+
+        
+
+    
+{% endblock content %}
