@@ -1,0 +1,21 @@
+{% extends '_base.html'%}
+{% block content %}
+   <h3>Features list</h3>
+
+   {% for feature in object_list %}
+        <h4>{{feature.name}}</h4>
+        <button><a href="{% url 'detail' feature.pk %}">Show Detail</a></button>
+        <button><a href="{% url 'update' feature.pk  %}">update</a></button>
+        <button><a href="{% url 'delete' feature.pk  %}">delete</a></button>
+
+
+
+    {% endfor %}
+
+
+    <div>
+    <p>    </p>
+    <button><a href="{% url 'create' %}">create new feature</a></button>
+    </div>
+
+{% endblock content %}
