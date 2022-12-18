@@ -9,6 +9,11 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from .models import feature 
 
+class LIST(ListView):
+    template_name = "twitterapp/list.html"
+    model = feature 
+    context_object_name = 'F'
+
 
 class FeatureListView(ListView):
     template_name = "twitterapp/feature-list.html"
@@ -35,7 +40,7 @@ class FeatureUpdateView(UpdateView):
 class FeatureDeleteView(DeleteView):
     template_name = "twitterapp/feature-delete.html"
     model = feature
-    success_url = reverse_lazy("list")
+    success_url = reverse_lazy("home")
 class About_Us(TemplateView):
     template_name="twitterapp/About.html"
 

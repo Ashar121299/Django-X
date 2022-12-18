@@ -8,19 +8,13 @@
         <h4>{{feature.name}}</h4>
         
         <button><a href="{% url 'detail' feature.pk %}">Show Detail</a></button>
-        <button><a href="{% url 'update' feature.pk  %}">update</a></button>
-        <button><a href="{% url 'delete' feature.pk  %}">delete</a></button>
         <p></p>
         <p></p>
 
 
 
     {% endfor %}
-    <div>
-        <p>    </p>
-        <p></p>
-        <button><a href="{% url 'create' %}">create new feature</a></button>
-        </div>
+    
 
 
     
