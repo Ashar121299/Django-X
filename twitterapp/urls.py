@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import FeatureListView, FeatureDetailView, FeatureCreateView, FeatureUpdateView,FeatureDeleteView,About_Us
+from .views import LIST,FeatureListView, FeatureDetailView, FeatureCreateView, FeatureUpdateView,FeatureDeleteView,About_Us
 urlpatterns = [
-    path('', FeatureListView.as_view(), name='list'),
+    path('home', FeatureListView.as_view(), name='home'),
+    path('', LIST.as_view(), name='list'),
     path('<int:pk>/', FeatureDetailView.as_view(), name='detail'),
     path('create/', FeatureCreateView.as_view(), name='create'),
     path('<int:pk>/update/', FeatureUpdateView.as_view(), name='update'),
